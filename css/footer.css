@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.downfoot{
+    height: 200px;
+    width: 100%;
+    
+}
+.sec2{
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(37, 37, 63); */
+    /* background-image: linear-gradient(white,black ,blue); */
+    /* border: 2px solid brown; */
+}
+.sec2 i{
+    font-size: 10px;
+    color:rgb(255, 255, 255);
+    margin:0 20px;
+}
+
+.sec1 .b  :hover{
+ background-color: white;
+ color: black;
+ 
+}
+
+#facebook:hover{
+    color: rgb(66 103 178);
+}
+#instagram:hover{
+    background-image: linear-gradient(rgb(5 10 230) , rgb(88 81 216),rgb(131 58 180),rgb(193 53 132),rgb(225 48 108),rgb(253 36 76),rgb(247 119 55),rgb(252 175 69),rgb(255 220 128));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: transparent; */
+    /* color: red; */
+}
+#whatsapp:hover{
+    color:rgb(255, 255, 255);
+    background-color: rgb(37 211 102);
+    border-radius: 100%;
+}
+#linkdin:hover{
+    color:rgb(70, 129, 247)
+}
+
+@media(max-width : 720px) {
+    .downfoot{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .sec1,.sec2{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .sec1 a,.sec1 b{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+}

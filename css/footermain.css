@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.downfoot{
+    height: 150px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.sec1{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(26, 25, 25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+.sec1 .a{
+    height: 100px;
+    width: 50%;
+    
+}
+.sec1 .b{
+    height: 100px;
+    width: 50%;
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.sec1 .b a{
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: aliceblue;
+    margin: 0 20px;
+    text-decoration: none;
+    padding: 7px;
+    font-weight: 500px;
+    position: relative;
+    border-radius: 9px;
+    transition:all .05s ease-in-out;
+    
+}
+
+.sec1 .a h1{
+    font-size: 30px;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 6px 6px;
+    margin: 15px 15px ;
+    border: 2px solid white;
+    width: 200px;
+    text-align: center;
+}
+.sec2{
+    height: 100px;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 25, 25);
+}
+.sec2 i{
+    font-size: 20px;
+    color:aliceblue;
+    margin:0 20px;
+    border: none;
+    outline: none;
+}
+
+.sec1 .b  :hover{
+ background-color: rgba(255, 255, 255, 0.151);
+ color: rgb(255, 255, 255);
+ border: none;
+outline: none;
+}
+
+#facebook:hover{
+    color: rgb(66 103 178);
+}
+#instagram:hover{
+    background-image: linear-gradient(rgb(5 10 230) , rgb(88 81 216),rgb(131 58 180),rgb(193 53 132),rgb(225 48 108),rgb(253 36 76),rgb(247 119 55),rgb(252 175 69),rgb(255 220 128));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: transparent; */
+    /* color: red; */
+}
+#whatsapp:hover{
+    color:white;
+    background-color: rgb(37 211 102);
+    border-radius: 100%;
+}
+#linkdin:hover{
+    color:rgb(70, 129, 247)
+}
+
+@media(max-width : 720px) {
+    .downfoot{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .sec1,.sec2{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .sec1 a,.sec1 b{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+}

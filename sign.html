@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="main.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+    </nav>
+<div class="container">
+       <div class="register">
+            <div class="from">
+                <h2>sign in</h2>
+                <form action="">
+                    
+                    <input name="First name" type="text" name="" class="input_field" placeholder="First name"><br>
+                    
+                    <input name="Last name" type="text" name="" class="input_field" placeholder="Last name"><br>
+                    
+                    <input name="Email address" type="text" name="eml" placeholder="Email address" class="input_field"><br/>
+                    <div class="passbox">
+                        <input type="password" name="pwd" id="pass" placeholder="Password" class="input_field"><i class="fa-solid fa-eye-slash" id="eye"></i><br/>
+                    </div> 
+                    <button  type="submit" class="btn"><a href="product.html">submit</a></button>
+                </form>
+                <div class="confirm hide" id="passcon"> 
+                    <div class="condition">
+                        <ul>
+                            <li><span class="hide" id="number">must be a number</span></li>
+                            <li><span class="hide" id="capital">must be a capital letter</span></li>
+                            <li><span class="hide" id="length"> must be 8 chrecter</span></li>
+                        </ul>          
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+     
+</div>
+
+
+
+    <script>
+        const x=document.getElementById("pass");
+        document.getElementById("eye").addEventListener("click" , function(){
+            if(x.type == "password")
+            {
+                x.type="text";
+                this.classList.add("fa-eye");
+                this.classList.remove("fa-eye-slash");
+            }
+            else{
+                x.type="password"
+                this.classList.remove("fa-eye");
+                this.classList.add("fa-eye-slash");
+            }
+        })
+        x.addEventListener("focus", function(){
+            document.getElementById("passcon").classList.remove("hide")
+        })
+        x.addEventListener("blur", function(){
+            document.getElementById("passcon").classList.add("hide")
+        })
+        x.addEventListener("keyup" , function(){
+                validlength(x.value);
+                validCap(x.value);
+                validnumber(x.value);
+                validspacial(x.value)
+            })
+        
+        function validlength(x){
+
+            if(x.length>=8)
+            {
+                document.getElementById("length").classList.add("unhide");
+                document.getElementById("length").classList.remove("hide");
+            }
+            else{
+                document.getElementById("length").classList.remove("unhide");
+                document.getElementById("length").classList.add("hide");
+            } 
+        }
+        function validCap(x){
+            if(x.match(/[A-Z]/))
+            {
+                document.getElementById("capital").classList.add("unhide");
+                document.getElementById("capital").classList.remove("hide");
+            }
+            else{
+                document.getElementById("capital").classList.add("hide");
+                document.getElementById("capital").classList.remove("unhide");
+            }
+        }
+        function validnumber(x){
+            if(x.match(/[0-9]/))
+            {
+                document.getElementById("number").classList.add("unhide");
+                document.getElementById("number").classList.remove("hide");
+            }
+            else{
+                document.getElementById("number").classList.add("hide");
+                document.getElementById("number").classList.remove("unhide");
+            }
+        }
+    </script>
+</body>
+</html>

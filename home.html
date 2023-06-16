@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body onload="slider()">
+    <div class="overlay"></div>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="button"><a href="home.html">Home</a></div>
+                <div class="button"><a href="galary.html">Galary</a></div>
+                <div class="button"><a href="contact.html">Contact</a></div>
+                <div class="button"><a href="help.html">Help</a></div>
+            </div>
+        </nav>
+    </header>
+
+
+
+        <div class="body-container">
+            
+            <div class="banner">
+                <h1>welcome to flora</h1>
+            </div>
+            <div class="body-content">
+                <div class="section1">
+                    <h1>online flower <br/> <span id="h1-style">shop</span></h1>
+                    <p id="about">abvialable all types of flower made product and many more</p>
+                    <div class="btn1" onclick="openpopup()">Get started</div>
+                </div>
+                <div class="section2">
+                    <div class="text"><h1>created by heart</h1></div>
+                    <div class="logo">
+                        <img src="image/logo1.jpeg" alt="SA" id="top-image">
+                    </div>
+                </div>
+        </div>
+
+        <div class="popup" id="pop" >
+            <i class="fa-sharp fa-solid fa-square-xmark" id="crossbtn" onclick="closepop()"></i>
+            <h1>notification</h1>
+            <p>you have to</br/> 
+            <div class="btn1"><a href="login.html">login</a></div>
+            <div class="btn1"><a href="sign.html">sign in</a></div>
+        </div>
+    </div> 
+
+        <script>
+            function openpopup(){
+                document.getElementById("pop").classList.toggle("active");
+                document.getElementById("pop").classList.remove("inactive");
+            }
+            function closepop(){
+                document.getElementById("pop").classList.remove("active");
+                document.getElementById("pop").classList.toggle("inactive");
+            }
+
+
+            var image_slider = document.getElementById("top-image");
+            var image = new Array(
+                "./image/dip1.jpeg",
+                "./image/dip2.jpeg",
+                "./image/dip3.jpeg",
+                "./image/flower.jpg"
+            );
+    
+    
+            var length =image.length;
+            var i =0;
+        function slider(){
+            image_slider.src=image[i];
+            i++;
+            setTimeout('slider()',3000);
+            if (i==image.length)
+            {
+                i=0;
+            }
+           
+        }
+        </script>
+    <div class="test">
+        <div class="card">
+            <div class="imagecon">
+                <img src="image/logo1.jpeg" alt="">
+            </div>
+            <div class="aboutcon">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eum excepturi rem in? Ut quasi dignissimos a nihil? Ullam, quis.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imagecon">
+                <img src="image/logo1.jpeg" alt="">
+            </div>
+            <div class="aboutcon">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eum excepturi rem in? Ut quasi dignissimos a nihil? Ullam, quis.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imagecon">
+                <img src="image/logo1.jpeg" alt="">
+            </div>
+            <div class="aboutcon">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eum excepturi rem in? Ut quasi dignissimos a nihil? Ullam, quis.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imagecon">
+                <img src="image/logo1.jpeg" alt="">
+            </div>
+            <div class="aboutcon">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eum excepturi rem in? Ut quasi dignissimos a nihil? Ullam, quis.</p>
+            </div>
+        </div>
+    </div>
+</div>   
+</body>
+</html>

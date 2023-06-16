@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footermain.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>about</title>
+    <style>
+        footer{
+            margin-top: 300px;
+        }
+        #dots{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="button"><a href="home.html">home</a></div>
+                <div class="button"><a href="">service</a></div>
+                <div class="button"><a href="">contact</a></div>
+                <div class="button"><a href="">help</a></div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="section1">
+            <h1>About us</h1>
+            <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti dignissimos dolore fuga! Delectus debitis quod, iste ut porro incidunt facere aliquam harum, amet recusandae, repellat aliquid. Est, ullam ascum. Similique quos omnis reiciendis. <span id="dots" style="display: inline;">...</span><span id="more" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorem porro architecto! Obcaecati, quis ad dolor aliquid ratione corporis odio vel excepturi culpa quia voluptate consequatur inventore hic nobis maiores. Amet rem, provident excepturi libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+
+            <button onclick="myFunction()" id="myBtn">Read more</button>   
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+    </script>
+     <footer>
+        <div class="downfoot">
+            <div class="sec1">
+                <div class="a">
+                    <a href="main.html"><h1>Flora</h1></a>
+                </div>
+                <div class="b">
+                    <a href="about.html">about</a>
+                    <a href="service.html">services</a>
+                    <a href="help.html">help</a>
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+            <div class="sec2">
+                <div class="index">
+                    <a href=""><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook" id="facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram" id="instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin-in" id="linkdin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

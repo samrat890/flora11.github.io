@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background: #000; */
+    background-image:url(/image/flower1.jpeg) , linear-gradient(rgb(255, 234, 0),white );
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    margin: auto ;
+    /* display: flex; */
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    color: rgb(0, 0, 0);
+    font-family:  sans-serif;
+    /* width: 500px; */
+    overflow: hidden;
+    margin:  0 10px;
+    font-size: 24px;
+    text-align: justify;
+}
+button{
+    margin: auto;
+    align-items: center;
+    padding: 15px 60px;
+    background: rgb(255, 94, 94);
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 10px;
+}
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+    font-family: sans-serif;
+}
+.section1{
+    max-width: 700px;
+    padding-top: 80px;
+    height: 100%;
+    margin-bottom: 90px;
+}
+.moretext{
+    display: none;
+}
+.text.Showmore .moretext{
+    display: inline;
+}
